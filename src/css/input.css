@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-2xl;
+  }
+}
+
+/* .card-group {
+  background-color: black;
+}
+
+.card-group:hover > .big-card:nth-child(1) {
+  transform: translateX(50%);
+}
+.card-group:hover > .big-card:nth-child(2) {
+  transform: translateX(90%);
+}
+.card-group:hover > .big-card:nth-child(3) {
+  transform: translateY(50%);
+}
+.card-group:hover > .big-card:nth-child(4) {
+  transform: translateX(-50%);
+} */
+
+/*scaling down the inactive card group or the unknown card group to zero*/
+.card-group[data-status="unknown"] {
+  transform: scale(0);
+}
+
+.card-group[data-status="after"] {
+  transform: translateX(50%) scale(0);
+}
+
+/*when we like something, we want it to go towards right and scale to 0 with an animation*/
+.fade-when-liked {
+  @apply scale-0 translate-x-1 translate-y-1 transition-all origin-right ease-out duration-500;
+}
+
+.fade-when-hated {
+  @apply scale-0 translate-x-1 translate-y-1 transition-all origin-left ease-out duration-500;
+}

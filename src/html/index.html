@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tailwind Prac</title>
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+
+  <body>
+    <!-- to make a navbar we need flexbox in row(default) with three levels
+        logo or title (left most)
+        all the nav items (right most)
+
+        when the screen is small or medium 
+        items will be hidden -> one button or a menu bar icon
+        on click the nav menu will come up
+    -->
+    <section id="navmenu" class="container mx-auto max-w-full">
+      <div
+        class="main-nav-menu bg-purple-400 flex align-center justify-between px-6 py-8 relative"
+      >
+        <div class="logo-name text-white text-bold text-2xl">Co Name</div>
+
+        <div class="menu-items hidden md:flex text-white space-x-4 px-4">
+          <div class="inline-block text-2md cursor-pointer">
+            <a href="#">home</a>
+          </div>
+          <div class="inline-block text-2md cursor-pointer">
+            <a href="#">about us</a>
+          </div>
+          <div class="inline-block text-2md cursor-pointer">
+            <a href="#">contact</a>
+          </div>
+          <div class="inline-block text-2md cursor-pointer">
+            <a href="#">careers</a>
+          </div>
+        </div>
+
+        <div
+          class="menu-button p-1 border border-white text-white text-xl rounded-lg cursor-pointer hover:bg-purple-300 hover:text-purple-600 md:hidden active:animate-ping"
+        >
+          Menu
+        </div>
+      </div>
+      <div
+        class="menu-when-phone hidden absolute flex flex-col space-y-8 text-center min-w-full py-6 right-0 mx-auto text-white font-bold bg-purple-300"
+      >
+        <div class="inline-block text-2md cursor-pointer">
+          <a href="#">home</a>
+        </div>
+        <div class="inline-block text-2md cursor-pointer">
+          <a href="#">about us</a>
+        </div>
+        <div class="inline-block text-2md cursor-pointer">
+          <a href="#">contact</a>
+        </div>
+        <div class="inline-block text-2md cursor-pointer">
+          <a href="#">careers</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container max-w-full text-center mx-auto py-10 bg-red-200">
+      <h1>hello world</h1>
+    </section>
+
+    <section
+      class="container max-w-full mx-auto flex space-x-2 bg-red-300 py-4 justify-around items-center"
+    >
+      <div
+        class="w-28 h-4 bg-red-400 animate-spin hover:bg-slate-400 cursor-pointer"
+      ></div>
+      <div class="w-4 h-4 bg-red-500 animate-bounce"></div>
+      <div class="w-12 h-12 bg-red-600 animate-ping rounded-full"></div>
+      <div class="w-24 h-24 bg-red-700 animate-pulse"></div>
+      <div class="w-24 h-24 bg-red-800 animate-none"></div>
+    </section>
+
+    <section
+      class="container mx-auto min-w-full bg-purple-300 grid grid-cols-3 justify-between items-center gap-x-2"
+    >
+      <div class="w-24 h-24 bg-red-400 rounded-full"></div>
+      <div class="w-4 h-4 bg-red-500"></div>
+      <div class="w-24 h-24 bg-red-600"></div>
+      <div class="w-24 h-24 bg-red-700"></div>
+      <div class="w-24 h-24 bg-red-800"></div>
+    </section>
+
+    <section class="grid-lesson container mx-auto">
+      <!-- grid -->
+      <div class="grid grid-cols-3 gap-x-2 gap-y-3 grid-flow-dense">
+        <div class="bg-red-600 h-20 rounded-lg"></div>
+        <div class="bg-purple-600 rounded-lg h-12 col-span-3"></div>
+        <div class="bg-blue-600 rounded-lg h-12 self-center"></div>
+        <div
+          class="bg-green-600 rounded-lg min-h-12 row-span-2 col-span-2"
+        ></div>
+        <div class="bg-cyan-600 rounded-lg h-12 w-4 justify-self-center"></div>
+        <div class="bg-pink-600 rounded-lg h-12"></div>
+        <div class="bg-orange-600 rounded-lg h-12"></div>
+        <div class="bg-gray-600 rounded-lg h-12"></div>
+        <div class="bg-yellow-600 rounded-lg h-12"></div>
+        <div class="bg-indigo-600 rounded-lg h-12"></div>
+      </div>
+    </section>
+
+    <section>
+      <div
+        class="container mx-auto h-screen bg-black"
+      >
+        <div class="all-card-groups flex flex-col justify-center relative transform ease-out duration-200">
+
+          <!-- card group -1 -->
+          <div class="card-group group transition-all ease-out duration-200" data-index="0" data-status="active">
+            <!-- cards -->
+
+              <!-- small cards -->
+            <div
+              class="small-card w-14 h-20 bg-cyan-300 rounded-lg shadow-md top-56 left-1/2 absolute translate-x-2 rotate-1 opacity-80 group-hover:translate-x-40 group-hover:-translate-y-20 group-hover:-rotate-12 transition-all ease-in duration-200"
+            ></div>
+            <div
+              class="small-card w-14 h-20 bg-violet-300 rounded-lg shadow-md top-56 left-1/2 absolute translate-x-2 rotate-1 opacity-80 group-hover:translate-x-36 group-hover:translate-y-44 group-hover:rotate-45 transition-all  ease-in duration-200"
+            ></div>
+            <div
+              class="small-card w-14 h-20 bg-purple-300 rounded-lg shadow-md top-56 left-1/2 absolute translate-x-2 rotate-1 opacity-80 group-hover:-translate-x-32 group-hover:translate-y-36 group-hover:-rotate-45 transition-all  ease-in duration-200"
+            ></div>
+            <div
+              class="small-card w-14 h-20 bg-gray-300 rounded-lg shadow-md top-56 left-1/2 absolute translate-x-2 rotate-1 opacity-80 group-hover:-translate-x-36 group-hover:-translate-y-16 group-hover:-rotate-12 transition-all  ease-in duration-200"
+            ></div>
+            <!-- big cards -->
+            <div
+              class="big-card w-28 h-40 bg-green-300 rounded-lg shadow-md top-56 left-1/2 absolute -translate-x-2 -translate-y-1 -rotate-1 opacity-80 group-hover:-translate-x-16 group-hover:translate-y-3 group-hover:-rotate-12 transition-all  ease-in duration-200"
+            ></div>
+            <div
+              class="big-card w-28 h-40 bg-red-300 rounded-lg shadow-md top-56 left-1/2 absolute -translate-x-1 opacity-80 group-hover:-translate-x-6 group-hover:translate-y-1 group-hover:-rotate-6 transition-all  ease-in duration-200"
+            ></div>
+            <div
+              class="big-card w-28 h-40 bg-blue-300 rounded-lg shadow-md top-56 left-1/2 absolute hover:translate-x-0 opacity-80 group-hover:translate-x-6 group-hover:translate-y-1 group-hover:rotate-6 transition-all  ease-in duration-200"
+            ></div>
+            <div
+              class="big-card w-28 h-40 bg-pink-300 rounded-lg shadow-md top-56 left-1/2 absolute translate-x-2 rotate-1 opacity-80 group-hover:translate-x-16 group-hover:translate-y-3 group-hover:rotate-12 transition-all  ease-in duration-200"
+            ></div>
+
+          
+            </div>
+
+
+
+            <!-- card group -2 -->
+          <div class="card-group group transform ease-out duration-200" data-index="1" data-status="unknown">
+            <!-- cards -->
+
+              <!-- small cards -->
+            <div
+              class="small-card w-14 h-20 bg-cyan-300 rounded-lg shadow-md top-56 left-1/2 absolute translate-x-2 rotate-1 opacity-80 group-hover:translate-x-40 group-hover:-translate-y-20 group-hover:-rotate-12 transition-all ease-in duration-200"
+            ></div>
+            <div
+              class="small-card w-14 h-20 bg-violet-300 rounded-lg shadow-md top-56 left-1/2 absolute translate-x-2 rotate-1 opacity-80 group-hover:translate-x-36 group-hover:translate-y-44 group-hover:rotate-45 transition-all  ease-in duration-200"
+            ></div>
+            <div
+              class="small-card w-14 h-20 bg-purple-300 rounded-lg shadow-md top-56 left-1/2 absolute translate-x-2 rotate-1 opacity-80 group-hover:-translate-x-32 group-hover:translate-y-36 group-hover:-rotate-45 transition-all  ease-in duration-200"
+            ></div>
+            <div
+              class="small-card w-14 h-20 bg-gray-300 rounded-lg shadow-md top-56 left-1/2 absolute translate-x-2 rotate-1 opacity-80 group-hover:-translate-x-36 group-hover:-translate-y-16 group-hover:-rotate-12 transition-all  ease-in duration-200"
+            ></div>
+            <!-- big cards -->
+            <div
+              class="big-card w-28 h-40 bg-green-300 rounded-lg shadow-md top-56 left-1/2 absolute -translate-x-2 -translate-y-1 -rotate-1 opacity-80 group-hover:-translate-x-16 group-hover:translate-y-3 group-hover:-rotate-12 transition-all  ease-in duration-200"
+            ></div>
+            <div
+              class="big-card w-28 h-40 bg-purple-300 rounded-lg shadow-md top-56 left-1/2 absolute -translate-x-1 opacity-80 group-hover:-translate-x-6 group-hover:translate-y-1 group-hover:-rotate-6 transition-all  ease-in duration-200"
+            ></div>
+            <div
+              class="big-card w-28 h-40 bg-blue-300 rounded-lg shadow-md top-56 left-1/2 absolute hover:translate-x-0 opacity-80 group-hover:translate-x-6 group-hover:translate-y-1 group-hover:rotate-6 transition-all  ease-in duration-200"
+            ></div>
+            <div
+              class="big-card w-28 h-40 bg-red-300 rounded-lg shadow-md top-56 left-1/2 absolute translate-x-2 rotate-1 opacity-80 group-hover:translate-x-16 group-hover:translate-y-3 group-hover:rotate-12 transition-all  ease-in duration-200"
+            ></div>
+
+          
+            </div>
+
+
+
+
+            <!-- card group -3 -->
+          <div class="card-group group transform ease-out duration-200" data-index="2" data-status="unknown">
+            <!-- cards -->
+
+              <!-- small cards -->
+            <div
+              class="small-card w-14 h-20 bg-cyan-300 rounded-lg shadow-md top-56 left-1/2 absolute translate-x-2 rotate-1 opacity-80 group-hover:translate-x-40 group-hover:-translate-y-20 group-hover:-rotate-12 transition-all ease-in duration-200"
+            ></div>
+            <div
+              class="small-card w-14 h-20 bg-violet-300 rounded-lg shadow-md top-56 left-1/2 absolute translate-x-2 rotate-1 opacity-80 group-hover:translate-x-36 group-hover:translate-y-44 group-hover:rotate-45 transition-all  ease-in duration-200"
+            ></div>
+            <div
+              class="small-card w-14 h-20 bg-purple-300 rounded-lg shadow-md top-56 left-1/2 absolute translate-x-2 rotate-1 opacity-80 group-hover:-translate-x-32 group-hover:translate-y-36 group-hover:-rotate-45 transition-all  ease-in duration-200"
+            ></div>
+            <div
+              class="small-card w-14 h-20 bg-gray-300 rounded-lg shadow-md top-56 left-1/2 absolute translate-x-2 rotate-1 opacity-80 group-hover:-translate-x-36 group-hover:-translate-y-16 group-hover:-rotate-12 transition-all  ease-in duration-200"
+            ></div>
+            <!-- big cards -->
+            <div
+              class="big-card w-28 h-40 bg-pink-300 rounded-lg shadow-md top-56 left-1/2 absolute -translate-x-2 -translate-y-1 -rotate-1 opacity-80 group-hover:-translate-x-16 group-hover:translate-y-3 group-hover:-rotate-12 transition-all  ease-in duration-200"
+            ></div>
+            <div
+              class="big-card w-28 h-40 bg-red-300 rounded-lg shadow-md top-56 left-1/2 absolute -translate-x-1 opacity-80 group-hover:-translate-x-6 group-hover:translate-y-1 group-hover:-rotate-6 transition-all  ease-in duration-200"
+            ></div>
+            <div
+              class="big-card w-28 h-40 bg-blue-300 rounded-lg shadow-md top-56 left-1/2 absolute hover:translate-x-0 opacity-80 group-hover:translate-x-6 group-hover:translate-y-1 group-hover:rotate-6 transition-all  ease-in duration-200"
+            ></div>
+            <div
+              class="big-card w-28 h-40 bg-green-300 rounded-lg shadow-md top-56 left-1/2 absolute translate-x-2 rotate-1 opacity-80 group-hover:translate-x-16 group-hover:translate-y-3 group-hover:rotate-12 transition-all  ease-in duration-200"
+            ></div>
+
+          
+            </div>
+            
+
+            <!-- button section after all cards stacked on top of each other -->
+            <div class="buttons flex space-x-4 justify-around items-center absolute top-96 left-1/2 mt-10">
+              <div class="hate-button p-4 w-auto text-white text-xl font-bold uppercase cursor-pointer rounded-full bg-slate-400 -translate-x-10"> hate</div>
+              <div class="like-button p-4 w-auto text-white text-xl font-bold uppercase cursor-pointer rounded-full bg-slate-400 -translate-x-4"> like</div>
+            </div>
+            
+        </div>
+    </div>
+    </section>
+    </section>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>
